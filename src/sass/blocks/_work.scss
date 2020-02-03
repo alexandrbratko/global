@@ -1,0 +1,40 @@
+.work {
+	padding: 51px 0 57px 0;
+
+	&__block {
+		margin-top: 37px;
+	}
+
+	&__round {
+		img {
+			width: 100%;
+		}
+	}
+
+	&__descr {
+		margin-top: 28px;
+	}
+
+	&__subheader {
+		color: $main-color;
+		font-size: 18px;
+		line-height: 18px;
+		font-weight: 700;
+		text-align: center;
+	}
+
+	&__text {
+		margin-top: 8px;
+		color: #3a3a3a;
+		font-size: 14px;
+		font-weight: 300;
+		line-height: 22px;
+		text-align: center;
+	}
+}
+
+@media (max-width: 575px) {
+	.work {
+		padding: 40px 0;
+	}
+}
