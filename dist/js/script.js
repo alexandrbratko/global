@@ -80,4 +80,19 @@ $(document).ready(function() {
   }
   validateForms("#consultation-form form");
   validateForms("#question-form form");
+  // отправка писем
+  $("form").submit(function(e) {
+    e.preventDefault();
+    $.ajax({
+      type: "POST",
+      url: "mailer/smart.php",
+      data: $(this).serialize()
+    }).done(function() {
+      $(this)
+        .find("input")
+        .val("");
+      $(form).trigger("reset");
+    });
+    return false;
+  });
 });
